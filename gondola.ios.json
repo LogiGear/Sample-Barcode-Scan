@@ -1,0 +1,37 @@
+{
+  "output": "./results",
+  "helpers": {
+    "Appium": {
+      "require": "./node_modules/gondolajs/built/helper/AppiumEx",
+      "smartWait": 5000,
+      "app": "f:/GondolaProjects/Demos/barcodedemo/AUT/CarRental_Simulator.ipa",
+      "desiredCapabilities": {
+        "platformName": "iOS",
+        "platformVersion": "13.3",
+        "deviceName": "iPhone 8 Plus",
+        "udid": "auto",
+        "automationName": "XCUITest",
+        "connectHardwareKeyboard": false,
+        "newCommandTimeout": 600
+      }
+    },
+    "Mochawesome": {}
+  },
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": "true"
+    }
+  },
+  "mocha": {
+    "reporterOptions": {
+        "reportDir": "results",
+        "inlineAssets": true,
+        "timestamp": "isoDateTime",
+        "reportFilename": "gondola",
+        "autoOpen": true,
+        "reportPageTitle": "Gondola Test Result"
+    }
+  },
+  "tests": "./built/tests/*.js",
+  "name": "SampleiOS"
+}

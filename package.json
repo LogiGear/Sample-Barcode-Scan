@@ -1,0 +1,24 @@
+{
+  "name": "barcodedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf built",
+    "compile": "npm run clean && tsc",
+    "test:android": "./node_modules/.bin/gondola -c gondola.android.json run --steps --reporter mochawesome",
+    "test:ios": "./node_modules/.bin/gondola -c gondola.ios.json run --steps --reporter mochawesome",
+    "test:multi": "./node_modules/.bin/gondola -c gondola.multi.json run-multiple --steps --all --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=10.19.0"
+  },
+  "dependencies": {
+    "gondolajs": "./lib/gondolajs-1.7.2088.tgz",
+    "mochawesome": "6.1.1",
+    "mssql": "^6.2.3",
+    "rimraf": "3.0.2"
+  }
+}
