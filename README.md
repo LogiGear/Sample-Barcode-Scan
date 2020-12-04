@@ -1,5 +1,6 @@
 # Sample-Barcode-Scan
-We using gondola to run real workflow for generate and scan barcode
+We using gondola to run real workflow for generate and scan barcode.
+Sample .apk run smooth in Android 8.1 (API 27)
 
 ### 1. Set up environment
 
